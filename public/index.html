@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Cities | Express Reboot</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <h1>Cities</h1>
+
+      <form method="POST">
+
+        <div id="name-group" class="form-group">
+          <input type="text" class="form-control" name="name" placeholder="Name">
+        </div>
+
+        <div id="desc-group" class="form-group">
+          <input type="text" class="form-control" name="description" placeholder="Description">
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+
+      </form>
+
+      <ul class='city-list'></ul>
+
+    </div>
+    <script src="jquery.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+body {
+  background-color: lightblue;
+}
+
+.wrapper {
+  text-align: center;
+  display: block;
+  padding: 10px;
+  margin: 10px;
+
+}
+
+h1 {
+  padding: 10px;
+  margin: 20px auto;
+  display: block;
+  width: 500px;
+  background-color: rgba(5,50,50,0.3);
+  color: white;
+  font-family: Sans-serif;
+}
+
+form {
+  padding: 10px;
+  margin: 20px auto;
+  display: block;
+  width: 500px;
+  background-color: rgba(0,0,0,0.2);
+}
+
+form .form-group {
+  padding: 2px;
+  width: 100%;
+  display: block;
+}
+
+form .form-group .form-control {
+  margin: 0 auto;
+  padding: 10px;
+  display: block;
+  width: 400px;
+}
+
+form .btn {
+  padding: 10px;
+  background-color: darkblue;
+  color: white;
+
+}
+
+.city-list {
+  display: block;
+  background-color: rgba(0,0,0,0.2);
+  color: white;
+  padding: 10px;
+  margin: 20px auto;
+  width: 500px;
+  font-family: Sans-serif;
+}
+
+li {
+  display: inline-block;
+  background-color: rgba(40,22,40, 0.5);
+  padding: 10px;
+  margin: 2px;
+}
