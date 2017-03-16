@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
 var app = require('./../app');
-app.listen(3000, function(){
-    console.log("Listening on port 3000");
+//this line is added below to listen to port on heroku, otherwise it will listen to localhost port 3000
+var port = process.env.PORT || 3000;
+app.listen(port, function(){
+    console.log("Listening on port " + port);
 });
