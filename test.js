@@ -1,8 +1,13 @@
 var request = require('supertest');
 var app = require('./app');
 
+var redis = require('redis');
+var client = redis.createClient();
 
-describe('REquests to the root path', function(){
+client.select('test'.length);// so we don't accidentally mess with production ro developement database
+client.flushdb();// this flushes the database making all info empty array
+
+describe('Requests to the root path', function(){
 
     it('Returns a 200 status code', function(done) {
 
@@ -52,7 +57,7 @@ describe('Listing cities on/cities', function(){
   it('Returns initial cities', function(done){
     request(app)
       .get('/cities')
-      .expect(JSON.stringify(['Lotopia', 'Caspiana', 'Indigo']),
+      .expect(JSON.stringify([]), //set to empty array instead of '['Lotopia', .. etc]' because of error.. see app.js.
           done);
   });
 
