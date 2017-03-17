@@ -5,10 +5,14 @@ var bodyParser = require('body-parser');
 var parseUrlencoded = bodyParser.urlencoded({extended: false});
 
 app.use(express.static('public'));
+  var cities = {
+    'Hanoi': 'Place of magic',
+    'Danang': 'Caspers home?',
+    'Saigon': 'Pokemon town?'
+  };
 
 app.get('/cities', function(request, response){
-  var cities = ['Lotopia', 'Caspiana', 'Indigo'];
-  response.json(cities);
+  response.json(Object.keys(cities));
 });
 
 app.post('/cities', parseUrlencoded, function(request, response){

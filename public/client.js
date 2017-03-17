@@ -12,9 +12,9 @@ $(function(){
 
     var target = $(event.currentTarget);
 
-    $.ajax(
+    $.ajax({
         type: 'DELETE',
-        url: '/cities/' + target.data('city');
+        url: '/cities/' + target.data('city')
         })
         .done(function(){
 
@@ -26,6 +26,7 @@ $(function(){
 
   });
 
+                // ^adds delete button
   // this function appends li's with links to the ul in the index.html file
   function appendToList(cities) {
     var list = [];
@@ -34,8 +35,7 @@ $(function(){
     for(var i in cities){
       city = cities[i];
       content = '<a href="/cities/'+city+'">'+city+'</a>' +
-                '<a href="#" data-city="'+city+'"><i class='fa fa-times'></i></a>';
-                // ^adds delete button
+                '<a href="#" data-city="'+city+'">X</a>';
       list.push($('<li>', { html: content }));
 
     }
